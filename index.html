@@ -163,24 +163,13 @@
     <div class="wrapper style2">
 
         <article id="main" class="container special">
-            <a href="#" class="image featured"><img src="images/pic06.jpg" alt=""/></a>
+            <a href="#" class="image featured"><img src="images/girl.jpg" alt=""/></a>
             <header>
-                <h2><a href="#">Sed massa imperdiet magnis</a></h2>
-                <p>
-                    Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
-                    pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
-                </p>
+                <h2><a href="#">冷知识</a></h2>
+                <p>普通男人一天说2000到4000个字，普通女人一天说8000到10000个字，个别女人一天说20000字以上！<br>
+                    从侧面证明了男人沉默寡言，女人伶牙俐齿。</p>
             </header>
-            <p>
-                Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-                posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-                sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam
-                mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan
-                lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-                consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-                interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-                natoque aenean scelerisque.
-            </p>
+
             <footer>
                 <a href="#" class="button">Continue Reading</a>
             </footer>
@@ -357,12 +346,12 @@
                         <p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor
                             aliquet.</p>
                         <ul class="icons">
-                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="https://twitter.com/zaB4dLuwjU0h9QA" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
                             <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
                             </li>
                             <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
                             </li>
-                            <li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a>
+                            <li><a href="https://www.pinterest.com/Yonnxu" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a>
                             </li>
                             <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
                             <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a>
@@ -400,30 +389,43 @@
 <script src="assets/js/APlayer.min.js"></script>
 <script>
     const ap = new APlayer({
+        // 迷你
         mini: true,
+        // 吸底
         fixed: true,
         container: document.getElementById('aplayer'),
-        audio: [{
+        audio: [
+
+            {
+                name: 'Drama [Instrumental]',
+                artist: 'Swaggin',
+                url: 'assets/mp3/Swaggin\' Drama [Instrumental].mp3',
+                cover:'images/lol.jpeg'
+            },{
             name: 'My Songs Know What You Did In the Dark',
             artist: 'Fall Out Boy',
             url: 'assets/mp3/Fall Out Boy - My Songs Know What You Did In the Dark (Light Em Up).mp3',
-            cover: 'cover.jpg'
+            cover: 'images/My Songs Know What You Did In the Dark.jpg'
         }, {
             name: '心臓を捧げよ!',
             artist: 'Linked Horizon',
-            url: 'assets/mp3/Linked Horizon - 心臓を捧げよ! (献出心脏!).mp3'
+            url: 'assets/mp3/Linked Horizon - 心臓を捧げよ! (献出心脏!).mp3',
+            cover:'images/心臓を捧げよ!.jpg'
         }, {
             name: 'unravel',
             artist: 'TK from凛冽时雨',
-            url: 'assets/mp3/TK from凛冽时雨——unravel.mp3'
-        }, {
-            name: 'mede mede',
-            artist: 'Reol',
-            url: 'assets/mp3/Reol - mede#mede.mp3.flac'
+            url: 'assets/mp3/TK from凛冽时雨——unravel.mp3',
+            cover:'images/unravel.jpeg'
         }, {
             name: '失楽園',
             artist: 'Reol',
-            url: 'assets/mp3/Reol - 失楽園.mp3'
+            url: 'assets/mp3/Reol - 失楽園.mp3',
+            cover:'images/Reol.jpeg'
+        }, {
+            name: 'mede:mede',
+            artist: 'Reol',
+            url: 'assets/mp3/Reol - mede mede.mp3',
+            cover:'images/Reol.jpeg'
         }]
     });
     ap.play();
