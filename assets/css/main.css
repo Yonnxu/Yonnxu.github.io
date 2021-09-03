@@ -2204,6 +2204,10 @@
 	}
 
 	#header img{
+		height:150px;
+		padding:10px;
+		box-sizing:border-box;
+		border-radius: 50%;
 		margin-top: -100px;
 	}
 
@@ -2264,11 +2268,11 @@
 		font-family: sans-serif;
 		color: transparent;
 	}
-	@media screen and ( max-width: 1270px ) {
+	@media screen and ( max-width: 1275px ) {
 		#header img{
-			margin-top: 0;
+			margin-top: -20px;
+			height: 120px;
 		}
-
 		#header h3{
 			padding-top: 0;
 		}
