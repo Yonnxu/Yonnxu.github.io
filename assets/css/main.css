@@ -2250,7 +2250,10 @@
 		font-size: 1.25em;
 		margin: 0;
 	}
-
+	#header h1{
+		display: none;
+		font-weight: bolder;
+	}
 	#header .text-malfunction {
 		position: absolute;
 		top: 20%;
@@ -2260,6 +2263,21 @@
 		font-size: 22px;
 		font-family: sans-serif;
 		color: transparent;
+	}
+	@media screen and ( max-width: 1270px ) {
+		#header img{
+			margin-top: 0;
+		}
+
+		#header h3{
+			padding-top: 0;
+		}
+		#header .text-malfunction {
+			display: none;
+		}
+		#header h1{
+			display: block;
+		}
 	}
 
 	#header .text-malfunction:before, .text-malfunction:after {
