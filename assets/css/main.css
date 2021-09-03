@@ -2283,6 +2283,12 @@
 			display: block;
 		}
 	}
+	@media screen and ( max-width: 736px ){
+		#header .down {
+			width: 100px;
+			bottom: 40px;
+		}
+	}
 
 	#header .text-malfunction:before, .text-malfunction:after {
 		content: attr(data-word);
