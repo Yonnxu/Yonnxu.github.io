@@ -2254,22 +2254,12 @@
 	#header .text-malfunction {
 		position: absolute;
 		top: 20%;
-		left: 105%;
+		left: 100%;
 		transform: translate(-50%, -50%) scale(2.5);
 		width: 220px;
 		font-size: 22px;
 		font-family: sans-serif;
 		color: transparent;
-	}
-
-	#header .line {
-		position: absolute;
-		width: 200px;
-		left: -1px;
-		height: 1px;
-		/*background: black;*/
-		z-index: 50;
-		animation: lineMove 5s ease-out infinite;
 	}
 
 	#header .text-malfunction:before, .text-malfunction:after {
@@ -2296,36 +2286,6 @@
 		z-index: 40;
 		mix-blend-mode: lighten;
 		animation: malfunctionAni 1.1s infinite 0.2s;
-	}
-
-	@keyframes lineMove {
-		9% {
-			top: 38px;
-		}
-		14% {
-			top: 8px;
-		}
-		18% {
-			top: 42px;
-		}
-		22% {
-			top: 1px;
-		}
-		32% {
-			top: 32px;
-		}
-		34% {
-			top: 12px;
-		}
-		40% {
-			top: 26px;
-		}
-		43% {
-			top: 7px;
-		}
-		99% {
-			top: 30px;
-		}
 	}
 
 	@keyframes malfunctionAni {
