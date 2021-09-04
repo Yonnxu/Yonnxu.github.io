@@ -1870,6 +1870,7 @@
 	ul.divided {
 		list-style: none;
 		padding-left: 0;
+        margin-top: 50px;
 	}
 
 	ul.divided li {
@@ -1884,7 +1885,10 @@
 		padding-top: 0;
 		margin-top: 0;
 	}
-
+	ul.divided li:last-child{
+		opacity: 0.6;
+		text-align: center;
+	}
 	/* Menu */
 
 	ul.menu {
@@ -2175,6 +2179,25 @@
 		padding-top: 0;
 	}
 
+    .add{
+        top: 0;
+        left: 0;
+        display: flex;
+        flex: 1;
+    }
+	.add img{
+		width: 70px;
+		transition: all 0.6s;
+	}
+
+	.add img:hover {
+		transform: scale(1.2);
+	}
+
+    .add li{
+        list-style: none;
+        flex: 1;
+    }
 	/* Header */
 
 	#header {
@@ -2258,6 +2281,24 @@
 		display: none;
 		font-weight: bolder;
 	}
+
+	#header h3{
+		background-image: linear-gradient(to right, red, orange, yellow, green, blue, green, yellow, orange, red, orange, yellow, green, blue, green, yellow, orange, red);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+		-webkit-background-size: 200% 100%;
+		animation: rolling 5s infinite linear;
+	}
+	@-webkit-keyframes rolling{
+		0%{
+			background-position: 0 0;
+		}
+		100%{
+			background-position: -100% 0;
+		}
+	}
+
+
 	#header .text-malfunction {
 		position: absolute;
 		top: 20%;
@@ -2412,16 +2453,16 @@
 	/* Nav */
 
 	#nav {
-		position: absolute;
+		color: #e7e9ff;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		text-align: center;
-		padding: 1.5em 0 1.5em 0;
-		z-index: 1;
+		padding: 1em 0 1em 0;
+		z-index: 999;
 		overflow: hidden;
 	}
-
 	#nav > ul {
 		line-height: 0px;
 		position: relative;
@@ -2464,6 +2505,10 @@
 		-webkit-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
 		-ms-transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
 		transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
+	}
+	
+	#nav ul li:hover{
+		color: #d5a5cb;
 	}
 
 	#nav > ul > li.active {
@@ -2863,7 +2908,10 @@
 	}
 
 	@media screen and (max-width: 736px) {
-
+		#live2dcanvas {
+			width: 150px;
+			height: 300px;
+		}
 		/* Basic */
 		html, body {
 			overflow-x: hidden;
@@ -3079,7 +3127,6 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: url("images/overlay.png");
 			background-size: 128px 128px;
 		}
 
