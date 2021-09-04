@@ -28,7 +28,7 @@
         <!-- Inner -->
         <div class="inner">
             <header>
-                <img src="images/head/tou.png" alt="">
+                <img src="images/head/head.jpg" alt="">
                 <div class="text-malfunction col-12-mobile" data-word="Administrator"></div>
                 <h1>Administrator</h1>
                 <h3>Time is money</h3>
@@ -168,7 +168,7 @@
     <div class="wrapper style2">
 
         <article id="main" class="container special">
-            <a href="#knowledge"  id="knowledge" class="image featured"><img src="images/girl.jpeg" alt=""/></a>
+            <a href="#knowledge" id="knowledge" class="image featured"><img src="images/girl.jpeg" alt=""/></a>
             <header>
                 <h2><a href="#">冷知识</a></h2>
                 <p>普通男人一天说2000到4000个字，普通女人一天说8000到10000个字，个别女人一天说20000字以上！<br>
@@ -222,8 +222,10 @@
                 <section class="col-8 col-12-mobile">
                     <header>
                         <ul class="add">
-                            <li><a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2195249372" target="_blank"><img src="images/buttom/qq.png" alt=""></a></li>
-                            <li><a href="https://steamcommunity.com/id/2195249372" target="_blank"><img src="images/buttom/steam.png" alt=""></a></li>
+                            <li><a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2195249372"
+                                   target="_blank"><img src="images/buttom/qq.png" alt=""></a></li>
+                            <li><a href="https://steamcommunity.com/id/2195249372" target="_blank"><img
+                                    src="images/buttom/steam.png" alt=""></a></li>
                         </ul>
                     </header>
                     <ul class="divided">
@@ -336,7 +338,7 @@
 <script src="live2d/live2dw/lib/L2Dwidget.min.js"></script>
 <script>
     L2Dwidget.init({
-        model:{jsonPath:"live2d/live2dw/assets/asuna_04.model.json"}
+        model: {jsonPath: "live2d/live2dw/assets/asuna_04.model.json"}
     })
 </script>
 <script>
@@ -346,20 +348,24 @@
         // 吸底
         fixed: true,
         // 自动播放
-        autoplay:true,
+        autoplay: true,
         container: document.getElementById('aplayer'),
         audio: [
-
             {
+                name: '平凡之路',
+                artist: '朴树',
+                url: 'assets/mp3/朴树 - 平凡之路.mp3',
+                cover: 'images/music/Road.jpeg'
+            }, {
+                name: 'スパークル',
+                artist: 'RADWIMPS',
+                url: 'assets/mp3/スパークル.mp3',
+                cover: 'images/music/name.jpeg'
+            }, {
                 name: '[Instrumental]',
                 artist: ' Swaggin\' Drama',
                 url: 'assets/mp3/Swaggin\' Drama [Instrumental].mp3',
                 cover: 'images/music/lol.jpeg'
-            }, {
-                name: '心臓を捧げよ!',
-                artist: 'Linked Horizon',
-                url: 'assets/mp3/Linked Horizon - 心臓を捧げよ! (献出心脏!).mp3',
-                cover: 'images/music/心臓を捧げよ!.jpg'
             }, {
                 name: 'unravel',
                 artist: 'TK from凛冽时雨',
@@ -380,6 +386,11 @@
                 artist: 'Fall Out Boy',
                 url: 'assets/mp3/Fall Out Boy - My Songs Know What You Did In the Dark (Light Em Up).mp3',
                 cover: 'images/music/My Songs Know What You Did In the Dark.jpg'
+            }, {
+                name: '心臓を捧げよ!',
+                artist: 'Linked Horizon',
+                url: 'assets/mp3/Linked Horizon - 心臓を捧げよ! (献出心脏!).mp3',
+                cover: 'images/music/心臓を捧げよ!.jpg'
             }]
     });
     ap.play();
