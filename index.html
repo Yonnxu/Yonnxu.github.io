@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="assets/css/main.css"/>
     <link rel="stylesheet" href="assets/css/APlayer.min.css">
     <link rel="stylesheet" href="assets/css/icon/iconfont.css">
-
+    <input type="hidden" id="_w_tusk">
+    <script type="text/javascript" src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script>
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
@@ -21,7 +22,6 @@
 </head>
 <body class="homepage is-preload">
 <div id="page-wrapper">
-
     <!-- Header -->
     <div id="header">
 
@@ -292,16 +292,11 @@
                         <p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor
                             aliquet.</p>
                         <ul class="icons">
-                            <li><a href="https://twitter.com/zaB4dLuwjU0h9QA" class="icon brands fa-twitter"><span
+                            <li><a href="https://twitter.com/zaB4dLuwjU0h9QA" class="icon brands fa-twitter" target="_blank"><span
                                     class="label">Twitter</span></a></li>
-                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
-                            </li>
-                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
-                            </li>
-                            <li><a href="https://www.pinterest.com/Yonnxu" class="icon brands fa-pinterest"><span
+                            <li><a href="https://www.pinterest.com/Yonnxu" class="icon brands fa-pinterest" target="_blank"><span
                                     class="label">Pinterest</span></a>
                             </li>
-                            <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
                             <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a>
                             </li>
                         </ul>
@@ -310,8 +305,8 @@
                     <!-- Copyright -->
                     <div class="copyright">
                         <ul class="menu">
-                            <li>&copy; Untitled. All rights reserved.</li>
-                            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                            <li>&copy; Untitled. 最终解释权归本人所有.</li>
+                            <li>Email: <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2195249372@qq.com">2195249372@qq.com</a></li>
                         </ul>
                     </div>
 
@@ -321,8 +316,10 @@
         </div>
     </div>
     <div id="aplayer"></div>
-</div>
 
+    <!-- Mouse  -->
+    <canvas class="fireworks" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+</div>
 
 <!-- Scripts -->
 
@@ -336,6 +333,9 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/APlayer.min.js"></script>
 <script src="live2d/live2dw/lib/L2Dwidget.min.js"></script>
+<script src="assets/js/anime.min.js"></script>
+<script src="assets/js/cursor.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fz6m/Private-web@2.0.7/js/custom/lamu-leimu.min.js"></script>
 <script>
     L2Dwidget.init({
         model: {jsonPath: "live2d/live2dw/assets/asuna_04.model.json"}
@@ -396,5 +396,4 @@
     ap.play();
 </script>
 </body>
-
 </html>

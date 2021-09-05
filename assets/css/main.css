@@ -2288,7 +2288,7 @@
 		font-weight: bolder;
 	}
 
-	#header h3 {
+	#header h3,h1 {
 		background-image: linear-gradient(to right, red, orange, yellow, green, blue, green, yellow, orange, red, orange, yellow, green, blue, green, yellow, orange, red);
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
@@ -3353,4 +3353,9 @@
 
 	.thumb-item-nav {
 		display: none !important;
+	}
+
+	/*隐藏左边返回顶部的按钮*/
+	#lamu-leimu #leimu{
+		display: none;
 	}
