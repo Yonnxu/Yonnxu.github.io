@@ -268,14 +268,6 @@
 
 	}
 
-	@media screen and (max-width: 736px) {
-
-		.container {
-			width: 100%;
-		}
-
-	}
-
 	/* Row */
 
 	.row {
@@ -1500,6 +1492,13 @@
 	}
 
 	@media screen and (max-width: 736px) {
+        #header .down {
+            width: 100px;
+            bottom: 40px;
+        }
+        .container {
+            width: 100%;
+        }
 
 		.row {
 			display: flex;
@@ -2337,13 +2336,6 @@
 		}
 	}
 
-	@media screen and ( max-width: 736px ) {
-		#header .down {
-			width: 100px;
-			bottom: 40px;
-		}
-	}
-
 	#header .text-malfunction:before, .text-malfunction:after {
 		content: attr(data-word);
 		position: absolute;
@@ -2921,7 +2913,7 @@
 		display: none;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 812px) {
 		#live2dcanvas {
 			width: 150px;
 			height: 300px;
