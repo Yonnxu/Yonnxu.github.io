@@ -1,33 +1,18 @@
-Helios by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+## 目的
+
+随便写的静态主页，主要是用于管理自己初学时期写过的代码。
+
+## 简介
+
+比较花里胡哨的页面,当然因为是给自己看的所以也不在意什么用户体验，反正我自己看着舒服就行 (O(∩_∩)O)。
+
+## 更新
+
+之后应该不会做什么重大更新，哪天兴致来了也说不定。
+
+## 致谢
+
+感谢HTML5 UP提供的模板
 
 
-This is Helios, a brand new site template for HTML5 UP. It's clean, modern, and designed
-to take advantage of larger (well, wider) displays while still being capable of gracefully
-scaling down to fit all manner of smaller ones.
 
-Demo images* courtesy of Michael Domaradzki, an awesome photographer I met over at
-deviantART. Check out his portfolio here:
-
-http://md.photomerchant.net/
-
-(* = Not included! Only meant for use with my own on-site demo, so please do NOT download
-and/or use any of Michaels's work without his explicit permission!)
-
-AJ
-aj@lkn.io | @ajlkn
-
-
-Credits:
-
-	Demo Images:
-		Michael Domaradzki (md.photomerchant.net)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
