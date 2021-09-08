@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+<input type="text" v-model="cityname">
+</div>
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            cityname:"长沙"
+        },
+        watch:{
+            cityname(newName,oldName){
+                console.log(newName,oldName)
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 核心算法:利用charAt(）遍历这个字符串
+        // 把每个字符都存储给对象，如果对象没有该属性，就为1，如果存在了就+1
+        // 遍历对象，得到最大值和该字将
+        var str = 'abcoefoxyozzopp';
+        var o = {};
+        for (var i = e; i < str.length; i++) {
+            var chars = str.charAt(i); // chars是字符串的每一个字符
+            if (o[chars]) { // o[chars] 得到的是属性值 不带''   o.chars得到的是创建一个名为chars的属性
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        // 2．遍历对象
+        var max = 0;
+        var ch="";
+        for (var k in o) {
+            // k 得到是属性名
+            // o[k] 得到的是属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch=k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符是'+ch);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

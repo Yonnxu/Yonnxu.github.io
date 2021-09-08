@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+    <!--    :to="{name:route1}"绑定到名为route1的路由上-->
+    <router-link :to="{name:'route1'}" tag="button" class="btn btn-info">前往主页</router-link>
+    <router-link :to="{name:'route2'}" tag="button" class="btn btn-info">前往用户中心</router-link>
+    <router-view></router-view>
+</div>
+
+<template id="login">
+    <div class="offset-lg-4 col-lg-3 bg-secondary">
+        <h3 class="mt-4 text-center">登录页面</h3>
+        <input placeholder="请输入用户名" class="offset-2 col-lg-8 form-control mt-2">
+        <input placeholder="请输入密码" class="offset-2 col-lg-8 form-control mt-2">
+        <div class="text-center">
+            <button class="btn btn-danger mt-3">登录</button>
+        </div>
+    </div>
+</template>
+
+<template id="register">
+    <div class="offset-lg-4 col-lg-3 bg-secondary">
+        <h3 class="mt-4 text-center">注册页面</h3>
+        <input placeholder="请输入用户名" class="offset-2 col-lg-8 form-control mt-2">
+        <input placeholder="请输入密码" class="offset-2 col-lg-8 form-control mt-2">
+        <div class="text-center">
+            <button class="btn btn-danger mt-3">注册</button>
+        </div>
+    </div>
+</template>
+
+<template id="index">
+    <div class="bg-secondary text-center">
+        <h3 class="mt-2 text-center">主页</h3>
+        <pre>
+              2222
+               yx
+            1111,1111
+            1111,1111
+            1111,1111
+        </pre>
+    </div>
+</template>
+
+<!--用户管理-->
+<template id="user"><!--用户管理组件-->
+    <div>
+        <h3 class="text-center my-4">用户管理</h3>
+        <!--路由链接-->
+        <router-link :to="{name:'route3'}" tag="button" class="btn btn-info">前往登录页</router-link>
+        <router-link :to="{name:'route4'}" tag="button" class="btn btn-info">前往注册页</router-link>
+        <div class="container bg-warning">
+            <router-view></router-view>
+        </div>
+    </div>
+</template>
+<script>
+    // 1.定义路由组件
+
+    var router_login = {
+        template: '#login'
+    };
+    var router_register = {
+        template: '#register'
+    };
+    var router_index = {
+        template: '#index'
+    };
+    var router_user = {
+        template: '#user'
+    };
+
+
+    // 定义路由数组
+    var routeArr = [
+        {
+            path: '/',
+            component: router_index
+            // redirect:'/index'
+        },
+        {
+            path: '/index',
+            name: 'route1',
+            component: router_index
+        },
+        {
+            path: '/user',
+            name: 'route2',
+            component: router_user,
+            children: [
+                {
+                    path: 'login',
+                    name: 'route3',
+                    component: router_login
+                },
+                {
+                    path: 'register',
+                    name: 'route4',
+                    component: router_register
+                },
+                {
+                    path: '/user',
+                    name: 'route2',
+                    redirect: '/user/login'
+                }
+            ]
+        }
+    ]
+
+
+    var router = new VueRouter({
+        routes: routeArr
+    });
+    var app = new Vue({
+        el: "#app",
+        router: router
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button @click="showInfo">请单机</button>
+    <p>{{msg}}</p>
+    <label for="male">
+<!--        如果name名字不一样 那么radio属性可以多选-->
+        <input type="radio" id="male" name="sex" value="男" v-model="sex">男
+    </label>
+    <label for="famale">
+        <input type="radio" id="famale" name="sex" value="女" v-model="sex">女
+    </label>
+    <h2>选择的性别是:{{sex}}</h2>
+</div>
+
+<div id="sx">
+<h1>{{details()}}</h1>
+</div>
+
+
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            msg: "",
+            sex:''
+        },
+        methods:
+            {
+                showInfo() {
+                    this.msg = "按钮被单机了!";
+                }
+            }
+    })
+
+    var vm1 = new Vue({
+        el: "#sx",
+        data: {
+            site: "sx教程"
+        },
+        methods: {
+            details:function () {
+                return this.site+"是个lj网站";
+            }
+        }
+    })
+</script>
+</body>
+</html>

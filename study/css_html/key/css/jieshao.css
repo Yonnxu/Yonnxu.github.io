@@ -1,0 +1,58 @@
+*{
+    font-family: 腾祥匆匆体简,serif;
+    color: #4c15cd;
+}
+@font-face {
+    font-family: 腾祥匆匆体简;
+    src: url("../TTF/腾祥匆匆体简.ttf");
+}
+
+body{
+    margin:0;
+    background: url("../images/key2.jpg") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.border {
+    border-style: dotted;
+    animation:myfirst 10s linear infinite;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+@keyframes myfirst {
+    0% {border:orangered;} 25% {border:lightyellow;} 50% {border:deepskyblue;} 75% {border:greenyellow;}100% {border:orangered;}
+}
+hr.xian{
+
+    width: 98%;
+
+    margin:0 auto;
+
+    border: 0;
+
+    height: 2px;
+
+    background: #333;
+
+    background-image: linear-gradient(to right, #ff5a5b, #4e4bcd, rgb(71, 206, 95));
+}
+p,h1{
+    padding-left: 20px;
+}
+h1{
+    color: #333;
+    font-weight: bolder;
+}
+p{
+    font-size: 18px;
+    width: 190vh;
+}
+ul li{
+    padding-left: 10px;
+    font-size: 18px;
+}
+.fanhui{
+    float: right;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 1.Math对象随机数方法random()返回一个随机的小数 0 =< x < 1
+        // 2．这个方法里面不跟参数
+        // 3．代码验证
+        //取随机小数 范围: [0,1) ;
+        console.log(Math.random());
+
+        // 4．我们想要得到两个数之间的随机整数并且包含这2个整数
+        // Math.floor(Math.random() *( max - min + 1)) +min;
+        // 取整
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        //5．随机点名
+        var arr = ['蔡徐坤', '肖战', '郑爽', '张三', '丁真'];
+        console.log(arr[getRandom(0, arr.length - 1)]);
+
+        console.log(getRandom(1, 10));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

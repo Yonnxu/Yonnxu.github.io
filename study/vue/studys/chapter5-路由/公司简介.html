@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="app" class="container border border-danger p-5 mt-5">
+    <div class="row">
+        <div class="col-2">
+            <ul class="nav flex-column text-center">
+                <router-link to="/com" tag="button" class="nav-item bg-warning p-2 mb-2">关于公司</router-link>
+                <router-link to="/cul" tag="button" class="nav-item bg-warning p-2 mb-2">公司文化</router-link>
+            </ul>
+        </div>
+        <div class="col-10 border bg-warning">
+            <router-view></router-view>
+        </div>
+    </div>
+</div>
+
+<template id="temp1">
+    <div class="bg-secondary text-center text-white">
+        <h2>阿里巴巴简介</h2>
+        <router-link to="/com/des" tag="button" class="bg-success p-1 mr-4">关于公司</router-link>
+        <router-link to="/com/gov" tag="button" class="bg-success p-1 mr-4">公司治理</router-link>
+
+        <div class="my-3 ">
+            <router-view></router-view>
+        </div>
+    </div>
+</template>
+
+
+<!--关于公司-->
+<template id="temp2">
+    <div class="text-white">
+        <p><strong>阿里巴巴集团的使命是让天下没有难做的生意。</strong></p>
+        <p>我们旨在助力企业，帮助其变革营销、销售和经营的方式，提升其效率。我们为商家、品牌及其他企业提供技术基础设施以及营销平台，帮助其借助新技术的力量与用户和客户进行互动，并更高效地进行经营。</p>
+        <p><strong>我们的愿景</strong></p>
+        <p>我们不追求大，不追求强；我们追求成为一家活102年的好公司。我们旨在构建未来的商业基础设施。我们的愿景是让客户相会、工作和生活在阿里巴巴</p>
+    </div>
+</template>
+
+<template id="temp3">
+    <div class="text-white">
+        <p><strong>相会在阿里巴巴：</strong></p>
+        <p>我们助力数以亿计的用户之间、消费者与商家之间、各企业之间的日常商业和社交互动。</p>
+        <p><strong>工作在阿里巴巴：</strong></p>
+        <p>我们向客户提供商业基础设施和新技术，让他们建立业务、创造价值，并与我们生态系统的参与者共享收益。</p>
+        <p><strong>生活在阿里巴巴：</strong></p>
+        <p>我们致力于拓展产品和服务范畴，让阿里巴巴成为我们客户日常生活的重要部份。</p>
+    </div>
+</template>
+
+<template id="temp4">
+    <div class="bg-info text-white">
+        <p><strong>我们的企业文化</strong></p>
+        <p>
+            阿里巴巴集团的文化关乎维护小企业的利益。我们的生态系统的所有参与者，包括消费者、商家、第三方服务供应商和其他人士，都享有成长或获益的机会。我们的业务成功和快速增长有赖于我们尊崇企业家精神和创新精神，并且始终如一地关注和满足客户的需求。</p>
+    </div>
+</template>
+<script>
+    const temp1 = {
+        template: '#temp1'
+    };
+    const temp2 = {
+        template: '#temp2'
+    };
+    const temp3 = {
+        template: '#temp3'
+    };
+    const temp4 = {
+        template: '#temp4'
+    };
+
+    // 创建路由数组
+    const routerArr = [
+        {
+            path:'/',
+            redirect:'/com/des'
+        },
+        {
+            path:'/cul',
+            component:temp4
+        },
+        {
+            path: '/com',
+            component:temp1,
+            children:[
+                {
+                    path:'des',
+                    component: temp2
+                },
+                {
+                    path:'gov',
+                    component: temp3
+                },
+                {
+                    path:'/com',
+                    redirect: '/com/des'
+                },
+
+            ]
+        },
+
+    ];
+    var myrouter=new VueRouter({
+        routes:routerArr
+    });
+
+    var app = new Vue({
+        el: "#app",
+        router: myrouter
+    })
+</script>
+</body>
+</html>

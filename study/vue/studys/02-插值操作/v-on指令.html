@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--    'v-on'==='@'   -->
+    <input type="button" value="v-on指令" v-on:click="doIt">
+    <input type="button" value="v-on简写" @click="doIt">
+    <input type="button" value="双击事件" @dblclick="doIt">
+<!--    回车触发  -->
+    <input type="text" @keyup.enter="sayHi">
+    <h2 @click="addmessage">{{message}}</h2>
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello'
+        },
+        methods:{
+            doIt:function () {
+                alert('做It')
+            },
+            addmessage:function () {
+                this.message+='world!'
+            },
+            sayHi:function () {
+                alert('触发了sayHi')
+            }
+        }
+    })
+</script>
+</body>
+</html>

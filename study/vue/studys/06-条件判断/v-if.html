@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p v-if="isShow">aaaaaaa</p>
+    <p v-show="isShow">aaaaaaa</p>
+    <input type="button" value="切换显示" @click="toggleShow">
+</div>
+
+<!--v-if和v-show差不多 频繁要切换的使用v-show 反之用v-if-->
+<script src="../02-插值操作/js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            isShow:false
+        },
+        methods:{
+            toggleShow:function () {
+                this.isShow=!this.isShow
+            }
+        }
+    })
+</script>
+</body>
+</html>

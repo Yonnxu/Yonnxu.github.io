@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--    HTML不支持大写 即使写入cInFo也会自动转为cinfo   需要使用‘-’符号才可以  -->
+    <cpn :c-Info="info" :child-Mymessage="message"></cpn>
+</div>
+
+<template id="cpn">
+    <div>
+    <h2>{{cInfo}}</h2>
+    <h2>{{childMymessage}}</h2>
+    </div>
+</template>
+<script src="js/vue.js"></script>
+<script>
+    const cpn={
+        template:'#cpn',
+        props:{
+            cInfo:{
+                type:Object,
+                default() {
+                    return {};
+                }
+            },
+            childMymessage:{
+                type: String,
+                default:''
+            }
+        }
+    };
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            info:{
+                name:'小六',
+                age:18,
+                height:1.52
+            },
+            message:'aaaaaa'
+        },
+        components:{
+            cpn
+        }
+    })
+</script>
+</body>
+</html>

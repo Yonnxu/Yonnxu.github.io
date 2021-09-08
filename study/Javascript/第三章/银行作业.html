@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var money=0;
+        do {
+            var choose = parseInt(prompt('请输入你要进行的操作\n1.存钱\n2.取钱\n3.显示余额\n4.退出'));
+            switch (choose) {
+                case 1:
+                    var save = prompt('请输入存钱的数额:');
+                    money += parseFloat(save);
+                    break;
+                case 2:
+                    var take = prompt('请输入取出的数额:');
+                    if (money - take < 0) {
+                        alert('余额不够无法取出' + take + ' 圆.');
+                    } else {
+                        money -= parseFloat(take);
+                    }
+                    break;
+                case 3:
+                    alert('当前剩余: ' + money + '圆');
+                    break;
+                case 4:
+                    alert('您正在退出');
+                    break;
+            }
+        } while (choose !== 4);
+        console.log(typeof money);
+        console.log(choose);
+        console.log(typeof choose);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

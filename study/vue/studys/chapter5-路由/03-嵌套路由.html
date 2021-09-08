@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+
+<router-link to="/index" tag="button" class="btn btn-info">前往主页</router-link>
+<router-link to="/user" tag="button" class="btn btn-info">前往用户管理页面</router-link>
+<router-view></router-view>
+
+</div>
+<template id="login">
+    <div class="offset-lg-4 col-lg-3 bg-secondary">
+        <h3 class="mt-4 text-center">登录页面</h3>
+        <input placeholder="请输入用户名" class="offset-2 col-lg-8 form-control mt-2">
+        <input placeholder="请输入密码" class="offset-2 col-lg-8 form-control mt-2">
+        <div class="text-center">
+            <button class="btn btn-danger mt-3">登录</button>
+        </div>
+    </div>
+</template>
+
+<template id="register">
+    <div class="offset-lg-4 col-lg-3 bg-secondary">
+        <h3 class="mt-4 text-center">注册页面</h3>
+        <input placeholder="请输入用户名" class="offset-2 col-lg-8 form-control mt-2">
+        <input placeholder="请输入密码" class="offset-2 col-lg-8 form-control mt-2">
+        <div class="text-center">
+            <button class="btn btn-danger mt-3">注册</button>
+        </div>
+    </div>
+</template>
+
+<template id="index">
+    <div class="bg-secondary text-center">
+        <h3 class="mt-2 text-center">主页</h3>
+        <pre>
+              1111
+               yx
+            1111,1111
+            1111,1111
+            1111,1111
+        </pre>
+    </div>
+</template>
+
+<!--用户管理-->
+<template id="user">
+    <div>
+        <h3 class="text-center my-4">用户管理</h3>
+        <!--        路由链接-->
+        <router-link to="/user/login" tag="button" class="btn btn-info">前往登录页面</router-link>
+        <router-link to="/user/register" tag="button" class="btn btn-info">前往登录页面</router-link>
+        <div class="container bg-warning">
+            <router-view></router-view>
+        </div>
+    </div>
+</template>
+
+<script>
+
+    // 1.定义路由组件
+
+    var router_login = {
+        template: '#login'
+    };
+    var router_register = {
+        template: '#register'
+    };
+    var router_index = {
+        template: '#index'
+    };
+    var router_user = {
+        template: '#user'
+    };
+
+    // 定义路由组
+
+    var routerArr = [
+        {
+            // 默认如果是根路径，跳转到主页
+            path: '/',
+            component: router_index
+        },
+        {
+            path: '/index',
+            component: router_index
+        },
+        {
+            path: '/user',
+            component: router_user,
+            // 嵌套路由的子组件
+            children: [
+                // 子路由的路径不需要斜杠'/'
+                {
+                    path: 'login',
+                    component: router_login
+                },
+                {
+                    path: 'register',
+                    component: router_register
+                },
+                {
+                    path:'/user',         //在子组件中，如果路径是父路径，默认进去的子路由是子路由中的某一个，当前是登录
+                    redirect:'/user/login'//重定向
+                }
+
+            ]
+        }
+    ]
+
+    // 定义路由管理者,在构造函数中指明管理哪个路由数组
+    var router = new VueRouter({
+        routes:routerArr
+    });
+
+    new Vue({
+        el:'#app',
+        router:router
+    })
+</script>
+</body>
+</html>

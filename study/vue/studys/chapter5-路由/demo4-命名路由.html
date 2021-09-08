@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>命名路由</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="app">
+    <!--v-bind:to="{name:route1}" 绑定到名叫route1的路由上-->
+    <router-link v-bind:to="{name:'route1'}" tag="button" class="btn btn-info">前往主页</router-link>
+    <router-link :to="{name:'route2'}" tag="button" class="btn btn-info">前往用户中心</router-link>
+    <router-view></router-view>
+</div>
+
+<template id="login">
+    <div>
+        <h3 class="mt-2 text-center">登录页面</h3>
+        <input placeholder="请输入用户名" class="form-control mt-2">
+        <input placeholder="请输入密码" class="form-control mt-2">
+        <div class="text-center">
+            <button class="btn btn-danger mt-2">登录</button>
+        </div>
+    </div>
+</template>
+
+<!--注册组件/模板-->
+<template id="register">
+    <div>
+        <h3 class="mt-2 text-center">注册页面</h3>
+        <input placeholder="请输入用户名" class="form-control mt-2">
+        <input placeholder="请输入密码" class="form-control mt-2">
+        <input placeholder="请输入确认密码" class="form-control mt-2">
+        <div class="text-center">
+            <button class="btn btn-danger mt-2">注册</button>
+        </div>
+    </div>
+</template>
+
+<template id="index">
+    <div class="bg-secondary text-center">
+        <h3 class="mt-2 text-center">主页</h3>
+        <pre>
+                长歌行
+                     汉乐府
+          青青园中葵，朝露待日晞。
+          阳春布德泽，万物生光辉。
+          常恐秋节至，焜黄花叶衰。
+          百川东到海，何时复西归？
+          少壮不努力，老大徒伤悲。
+            </pre>
+    </div>
+</template>
+
+<template id="user"><!--用户管理组件-->
+    <div>
+        <h3 class="text-center my-4">用户管理</h3>
+        <!--路由链接-->
+        <router-link :to="{name:'route3'}" tag="button" class="btn btn-info">前往登录页</router-link>
+        <router-link :to="{name:'route4'}" tag="button" class="btn btn-info">前往注册页</router-link>
+        <div class="container bg-warning">
+            <router-view></router-view>
+        </div>
+    </div>
+</template>
+
+<script>
+    //1、定义路由组件
+    var route_login = {
+        template: "#login"
+    };
+
+    var route_register = {
+        template: "#register"
+    };
+
+    var route_index = {
+        template: "#index"
+    };
+
+    var route_user = {
+        template: "#user"
+    };
+
+    //2、定义路由数组
+    var routeArr = [
+        {
+            path: "/",
+            redirect: "/index"  //component:route_index
+        }, {
+
+            path: "/index",
+            name: "route1",
+            component: route_index
+        },
+        {
+            path: "/user",
+            name: "route2",
+            component: route_user,
+            children:
+                [
+                    {
+                        path: "login",
+                        name: "route3",
+                        component: route_login
+                    },
+                    {
+                        path: "register",
+                        name: "route4",
+                        component: route_register
+                    },
+                    {
+                        path: "/user",
+                        name: "route2",
+                        redirect: "/user/login"
+                    }
+                ]
+        }
+    ];
+
+    //3.定义路由管理者,在构造函数中指明管理哪个路由数组
+    var router = new VueRouter({
+        routes: routeArr
+    });
+
+    new Vue({
+        el: "#app",
+        router: router
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+   <ol>
+       <todo-item v-for="item in sites" :todo="item"></todo-item>
+   </ol>
+</div>
+
+<div id="app1">
+    <ul>
+        <student-list v-for="item in students" :stu="item"></student-list>
+    </ul>
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('student-item',{
+        template:'<li>{{stu.id}},{{stu.name}},{{stu.age}},{{stu.sex}}</li>',
+        props:['stu']
+    });
+
+
+
+
+    Vue.component('todo-item',{
+        template:'<li>{{todo.text}}</li>',
+        props:['todo']
+    });
+
+    var app = new Vue({
+        el: "#app1",
+        data: {
+            students: [
+                {id:1,name:'张1',age:18,sex:'男'},
+                {id:2,name:'张2',age:18,sex:'男'},
+                {id:3,name:'张3',age:18,sex:'男'},
+                {id:4,name:'张4',age:18,sex:'男'},
+            ]
+        }
+    })
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            sites: [
+                {text:'taobao'},
+                {text:'taobao1'},
+                {text:'taobao2'}
+            ]
+        }
+    })
+</script>
+</body>
+</html>

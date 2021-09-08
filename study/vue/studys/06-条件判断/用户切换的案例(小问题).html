@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <span v-if="isUser">
+<!--        第11行代码可以给用户账号获取焦点事件 如果点击用户账号则可以输入input的内容-->
+        <label for="username">用户账号</label>
+<!--        如果key值一样或者没写，那么此组件只会修改变量值而不会重新创建一个（之前输入的点击切换后不删除）-->
+        <input type="text" id="username" placeholder="用户账号" key="user">
+        </span>
+    <span v-else>
+        <label for="userEmail">用户邮箱</label>
+        <input type="text" id="userEmail" placeholder="用户邮箱" key="email">
+    </span>
+    <button @click="isUser=!isUser">切换类型</button>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            isUser: true
+        }
+    })
+</script>
+</body>
+</html>

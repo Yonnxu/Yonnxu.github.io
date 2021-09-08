@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+<!--    三个计数器不会共用同一个data数据 而是调用data函数创建自己的data数据-->
+    <cpn></cpn>
+    <cpn></cpn>
+    <cpn></cpn>
+</div>
+<template id="cpn1">
+    <div>
+        <h2>当前计数器:{{counter}}</h2>
+        <button @click="add">+</button>
+        <button @click="sex">-</button>
+    </div>
+</template>
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('cpn',{
+        template:'#cpn1',
+        // 函数每次调用都会创建新的栈空间
+        data(){
+            return{
+                counter:0
+            }
+        },
+        methods:{
+            add(){
+                this.counter+=1
+            },
+            sex(){
+                this.counter-=1
+            }
+        }
+    })
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello'
+        }
+    })
+</script>
+
+<script>
+    function obj() {
+        return{
+            name:'小埋',
+            age:16
+        }
+    }
+
+    let obj1=obj();
+    let obj2=obj();
+    let obj3=obj();
+
+    obj1.name='小新';
+    console.log(obj1);
+    console.log(obj2);
+    console.log(obj3);
+</script>
+
+<script>
+    const objb={
+        name:'小1',
+        age:16
+    }
+
+    function abc() {
+        return objb
+    }
+
+    let obj11=abc();
+    let obj22=abc();
+    let obj33=abc();
+
+    obj11.name='小新';
+    console.log(obj11);
+    console.log(obj22);
+    console.log(obj33);
+</script>
+</body>
+</html>

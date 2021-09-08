@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //翻转数组
+        function reverse(arr) {
+            // if (arr instanceof Array) {
+            if (Array.isArray(arr)) {
+                var newArr = [];
+                for (var i = arr.length - 1; i >= 0; i--) {
+                    newArr[newArr.length] = arr[i];
+                }
+                return newArr;
+            } else {
+                return 'error 这个参数要求必须是数组格式[1,2,3]';
+            }
+        }
+
+        console.log(reverse([1, 2, 3]));
+        console.log(reverse(1, 2, 3));
+        //检测是否为数组
+        // (1)instanceof运算符它可以用来检测是否为数组
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array);
+        console.log(obj instanceof Array);
+
+        //Array .isArray(参数);  H5新增的方法ie9以上版本支持
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(obj));
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

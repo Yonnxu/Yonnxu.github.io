@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--父组件模板-->
+<div id="app">
+<cpn @itemclick="cpnClick"></cpn>
+</div>
+
+<!--子组件模板-->
+<template id="cpn">
+    <div>
+        <button v-for="item in categories"
+                @click="btnClick(item)">{{item.name}}</button>
+    </div>
+</template>
+<script src="js/vue.js"></script>
+<script>
+    //子组件
+    const cpn={
+        template:'#cpn',
+        data(){
+            return{
+                // category分类 类别
+                categories:[
+                    {id:'aaa',name:'热门推荐'},
+                    {id:'bbb',name:'手机'},
+                    {id:'ccc',name:'家电推荐'},
+                    {id:'ddd',name:'电脑推荐'}
+                ]
+            }
+        },
+        methods:{
+            btnClick(item){
+                //需要通过$emit传递给父组件 参数一是名字，参数二是数据
+                //发射事件 自定义事件
+                this.$emit('itemclick',item)
+            }
+        }
+
+    };
+
+    // 父组件
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello'
+        },
+        components:{
+            cpn
+        },
+        methods: {
+            cpnClick(item){
+                console.log('cpnClick',item);
+            }
+        }
+    })
+</script>
+</body>
+</html>

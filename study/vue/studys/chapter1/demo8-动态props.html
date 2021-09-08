@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input v-model="test">父组件内容{{test}}
+    <my-compl :props-message="test"></my-compl>
+</div>
+
+<!--定义模板-->
+<template id="templ">
+    <div>
+        <h3>父组件传值给子组件</h3>
+        <h4>传递了:{{propsMessage}}</h4>
+        <h4>子组件自身的值:{{dataMessage}}</h4>
+    </div>
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('my-compl', {
+        template: '#templ',
+        data: function () {
+            return{
+                dataMessage:'子组件dataMessage数据'
+            }
+        },
+        props:['props-message']//获取父组件的props-message属性传递进来的数据
+    });
+    var app = new Vue({
+        el: "#app",
+        data: {
+            test: 'hello',
+
+        }
+    })
+</script>
+</body>
+</html>

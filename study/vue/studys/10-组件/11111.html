@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p id="time"></p>
+    <h3>格式化时间</h3>
+    <!--在插值表达式中使用过滤器-->
+    <p>{{data | foematTime}}</p>
+    <p><button @click="stop">停止时间</button> </p>
+</div>
+
+<script>
+    var p1=document.getElementById("time");
+    p1.innerHTML=new Data();
+
+    function parseData (val)
+    {
+        return val<10 ? "0"+val : val;//小于10的数字， 前面加0
+    }
+
+    var vm=new Vue({
+        el:"#app",
+        data:{
+            data:new Data()
+        },
+        filters:{
+            formatTime:function (time) {
+                var year=time.getFullYear();
+                var month=parseData(time.getMonth()+1);
+                var day=parseData(time.getDate());
+                var hours=parseData(time.getHours());
+                var minutes=parseData(time.getMinutes());
+                var seconds=parseData(time.getSeconds());
+                return year+"年"+month+"月"+day+"日"+""+hours+":"+minutes+":"+seconds;
+            }
+        },
+        created:function ()//钩子函数，创建Vue实例之后
+        {
+            var that=this;
+            this.time=setInterval(function () {
+                that.data=new Date();
+            },1000);
+        },
+        methods:{
+            stop()
+            {
+                clearInterval(this.timer);
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

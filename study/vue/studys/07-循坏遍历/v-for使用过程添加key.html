@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+<!--        key值要一一对应  可以是DOM变高效-->
+        <li v-for="(item,index) in letters" :key="index+item">{{item}}</li>
+            {{item}}
+        </li>
+    </ul>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            letters: ['A', 'B', 'C', 'D']
+        }
+    })
+</script>
+</body>
+</html>

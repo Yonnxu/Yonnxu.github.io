@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <cpn @addclick="add" @sexclick="sex"></cpn>
+    <h2>{{num}}</h2>
+</div>
+
+<template id="cpn">
+    <div>
+        <button @click="addclick">+</button>
+        <button @click="sexclick">-</button>
+    </div>
+
+</template>
+<script src="js/vue.js"></script>
+<script>
+
+    const cpn={
+        template:'#cpn',
+        methods:{
+            addclick(){
+                this.$emit('addclick',this.num)
+            },
+            sexclick(){
+                this.$emit('sexclick',this.num)
+            }
+        }
+    }
+    var app = new Vue({
+        el: "#app",
+        data: {
+            num: 0
+        },
+        components:{
+            cpn
+        },
+        methods: {
+            add(num){
+                this.num++;
+            },
+            sex(num){
+                this.num--;
+            }
+        }
+
+    })
+</script>
+</body>
+</html>

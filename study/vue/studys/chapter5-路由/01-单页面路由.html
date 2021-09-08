@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p>
+        <!--    用router-link组织导航-->
+        <!--    通过传入的TRUE属性指定链接-->
+        <!--    router-link默认渲染成'<a>'————超链接的标签-->
+        <router-link to="/foo">Go To Foo</router-link>
+        <router-link to="/bar">Go To Bar</router-link>
+    </p>
+    <!--    路由出口.路由匹配到的组件会渲染到此处-->
+    <router-view></router-view>
+
+</div>
+<!--先引入vue的js再引入vue-router.js才可以  因为vue-router.js需要在全局属性的基础上挂载-->
+<script src="js/vue.js"></script>
+<script src="js/vue-router.js"></script>
+<script>
+    // 1.定义路由组件
+    const Foo = {
+        'template': `<div>foo</div>`
+    }
+    const Bar = {
+        'template': `<div>bar</div>`
+    }
+    // 2.定义路由
+    // 每一个路由必须映射一个组件
+    const routes = [
+        {path: '/foo', component: Foo},
+        {path: '/bar', component: Bar},
+    ];
+
+    // 3.创建router的实例，且传入路由(routers)配置
+
+    const router=new VueRouter({
+        routes
+    });
+
+    // 4.创建和挂载根实例
+
+    const app=new Vue({
+        router
+    }).$mount('#app');
+</script>
+</body>
+</html>

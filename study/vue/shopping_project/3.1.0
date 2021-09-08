@@ -1,0 +1,14 @@
+
+> fibers@5.0.0 install C:\Users\Administrator\WebstormProjects\untitled\课堂\vue-shop\node_modules\fibers
+> node build.js || nodejs build.js
+
+`win32-x64-72` exists; testing
+Binary is fine; exiting
++ fibers@5.0.0
+added 2 packages from 3 contributors and audited 1406 packages in 22.437s
+
+78 packages are looking for funding
+  run `npm fund` for details
+
+found 109 vulnerabilities (1 low, 108 moderate)
+  run `npm audit fix` to fix them, or `npm audit` for details

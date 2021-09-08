@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Open Sans", sans-serif;
+}
+.team-section{
+    height:100vh;
+    display: flex;
+}
+.person{
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: .6s;
+}
+.person:hover {
+    flex: 6;
+}
+.person-pic{
+    position: absolute ;
+    height:100%;
+    left: 50%;
+    transform: translateX( -50%);
+    filter: grayscale(80%) ;
+    transition: .3s;
+}
+.person:hover .person-pic {
+    filter: grayscale(0);
+}
+.person-info{
+    position: absolute ;
+    bottom: 10px ;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: .2s;
+}
+.person:hover .person-info {
+    opacity: 1;
+    bottom: 60px;
+    transition-delay: .6s;
+}
+
+.person-info h2{
+    font-size:20px;
+    color: #e74e4e;
+}
+.bottom
+{
+    right:0;
+    bottom:0;
+    color:#fff;
+    display:block;
+    width:100%;
+    text-align:center;
+    z-index: 10;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+.bottom span
+{
+    position: relative;
+    display:block;
+    left:0;
+
+}

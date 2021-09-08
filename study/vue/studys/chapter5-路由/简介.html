@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4 border">
+    <div class="row">
+        <div class="col-md-2">
+            <ul>
+                <router-link to="/index" tag="li" class="btn btn-info">关于公司</router-link>
+                <router-link to="/user" tag="li" class="btn btn-info">企业文化</router-link>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <router-view></router-view>
+        </div>
+    </div>
+</div>
+
+<template id="index">
+    <div>
+        <h2>阿里巴巴简介</h2>
+        <router-link to="/gongsi" tag="button">关于公司</router-link>
+        <router-link to="/zhili" tag="button">公司治理</router-link>
+    </div>
+</template>
+
+<template id="gongsi">
+    <div>
+    <pre>
+        相会在阿里巴巴：
+
+我们助力数以亿计的用户之间、消费者与商家之间、各企业之间的日常商业和社交互动。
+工作在阿里巴巴：
+
+我们向客户提供商业基础设施和新技术，让他们建立业务、创造价值，并与我们生态系统的参与者共享收益。
+生活在阿里巴巴：
+
+我们致力于拓展产品和服务范畴，让阿里巴巴成为我们客户日常生活的重要部份。
+    </pre>
+    </div>
+</template>
+
+<template id="zhili">
+    <div>
+        <pre>
+        我们的企业文化
+
+阿里巴巴集团的文化关乎维护小企业的利益。我们的生态系统的所有参与者，包括消费者、商家、第三方服务供应商和其他人士，都享有成长或获益的机会。我们的业务成功和快速增长有赖于我们尊崇企业家精神和创新精神，并且始终如一地关注和满足客户的需求
+    </pre>
+    </div>
+</template>
+
+<template id="user">
+<div>
+    <pre>
+        阿里巴巴集团的使命是让天下没有难做的生意。
+
+我们旨在助力企业，帮助其变革营销、销售和经营的方式，提升其效率。我们为商家、品牌及其他企业提供技术基础设施以及营销平台，帮助其借助新技术的力量与用户和客户进行互动，并更高效地进行经营。
+
+我们的愿景
+
+我们不追求大，不追求强；我们追求成为一家活102年的好公司。我们旨在构建未来的商业基础设施。我们的愿景是让客户相会、工作和生活在阿里巴巴
+    </pre>
+</div>
+</template>
+
+
+<script src="../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello'
+        }
+    })
+</script>
+</body>
+</html>

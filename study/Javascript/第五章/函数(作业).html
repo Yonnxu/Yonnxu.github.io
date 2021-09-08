@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var changdu = parseInt(prompt('请输入数组的长度'));
+        var arr = [];
+
+        for (var i = 1; i <= changdu; i++) {
+            var num = parseInt(prompt('请输入第' + i + '个数组的值'));
+            arr[i-1] = num;
+        }
+        console.log(arr);
+
+        //反转数组
+        function fn() {
+            var sum = 0;
+            for (var j = 1; j <= changdu; j++) {
+                sum = arr[j - 1];
+                arr[j - 1] = arr[changdu-1];
+                arr[changdu-1] = sum;
+                changdu--;
+            }
+        }
+        fn();
+        console.log(arr);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{message}}
+    <h2 v-once>{{message}}</h2>
+<!--    v-once可以监听 不会因为控制台的数据改变而改变-->
+</div>
+
+<script src="../../课堂/chapter1/js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello'
+        }
+    })
+</script>
+</body>
+</html>

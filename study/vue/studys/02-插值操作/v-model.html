@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input value="123" type="button" @click="setM">
+    <input value="text" v-model="message" @keyup.enter="getM">
+    {{message}}
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello'
+        },
+        methods:{
+            getM:function () {
+                alert(this.message)
+            },
+            setM:function () {
+                this.message=123;
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="vue_data">
+site:{{site}}
+</div>
+<script>
+    var data={
+        site:"百度",
+        url:"http",
+        student:"tom"
+    }
+    var app=new  Vue({
+        el:"#vue_data",
+        data:data
+    })
+    document.write(app.site===data.site)
+</script>
+</body>
+</html>

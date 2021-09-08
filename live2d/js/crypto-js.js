@@ -2109,7 +2109,7 @@
 
 	    /**
 	     * This key derivation function is meant to conform with EVP_BytesToKey.
-	     * www.openssl.org/docs/crypto/EVP_BytesToKey.html
+	     * www.openssl.org/docs/crypto/EVP_BytesToKey.css_html
 	     */
 	    var EvpKDF = C_algo.EvpKDF = Base.extend({
 	        /**

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <button @click="count+=Math.random()">生成随机数</button>
+    <p>生成的随机数是{{count}}</p>
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            count:0
+        }
+    })
+</script>
+</body>
+</html>

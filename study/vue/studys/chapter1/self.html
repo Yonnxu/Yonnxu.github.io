@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .one{
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            margin: 5px;
+        }
+        .two{
+            width: 70px;
+            height: 70px;
+            background: #aaa;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+<!--    —-one区域的点击只能由自己触发，事件冒泡是不能触发-->
+    <div class="one" @click.self="doParent">a
+        <div class="two" @click="doSub">b</div>
+    </div>
+</div>
+
+<script src="js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello'
+        },
+        methods:{
+            doParent(){
+                console.log('1111111')
+            },
+            doSub(){
+                console.log('222222')
+            }
+        }
+    })
+</script>
+</body>
+</html>

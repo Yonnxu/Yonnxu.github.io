@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="button" value="添加数据" @click="add">
+    <input type="button" value="移除数据" @click="remove">
+    <ul>
+        //  设置index索引
+        <li v-for="(item,index) in arr">
+            {{index+1}}aaaa:{{item}}
+        </li>
+    </ul>
+    <h2 v-for="item in citi" :title="item.name">
+        {{item.name}}
+    </h2>
+</div>
+
+<script src="../02-插值操作/js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            arr:[1,2,3,4,5],
+            citi:[
+                {name:'长沙'},
+                {name:'成都'}
+            ]
+        },
+        methods:{
+            add:function () {
+                this.citi.push({name:'北京'});
+            },
+            remove:function () {
+                // 移除最左边元素
+                this.citi.shift();
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .ipt{
+        color: #999;
+    }
+</style>
+<body>
+<input type="text" class="ipt" value="账号">
+
+<script>
+    Math.round()
+    var ipt=document.querySelector('input');
+    ipt.onfocus=function () {
+        if (this.value==='账号'){
+            this.value='';
+        }
+        this.style.color='#333';
+    }
+    ipt.onblur=function () {
+        if (this.value===''){
+            this.value='账号';
+        }
+        ipt.style.color='#999';
+    }
+
+</script>
+</body>
+
+</html>

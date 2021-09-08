@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    姓：<input type="text" v-model="fristName">
+    名:<input type="text" v-model="lastName">
+    <h4>用methods形式打印全名{{methodFullName()}},年龄{{age}}</h4>
+    <h4>用methods形式打印全名{{ComputerFullName}},年龄{{age}}</h4>
+    <h4>用methods形式打印全名{{watchFullName}},年龄{{age}}</h4>
+</div>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            fristName: '张',
+            lastName: '三',
+            age: 18,
+            watchFullName:'张三'
+        },
+        methods: {
+            methodFullName() {
+                console.log('这是方法返回');
+                return this.fristName + this.lastName;
+            }
+        },
+        computed: {
+            ComputerFullName(){
+                console.log('这是计算返回的');
+                return this.fristName + this.lastName;
+            }
+        },
+        watch: {
+            fristName: function (val) {
+                console.log('监听');
+                this.fristName=val;
+                return this.watchFullName=this.fristName()+this.lastName;
+            },
+            lastName:function (val) {
+                console.log('监听');
+                this.fristName=val;
+                return this.watchFullName=this.fristName()+this.lastName;
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

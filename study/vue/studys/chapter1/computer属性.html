@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>总价:{{totalPrice}}</p>
+    <p>单价:{{price}}</p>
+    <p>数量:{{num}}</p>
+    <button @click="num===0?0:num--">减少数量</button>
+    <button @click="num++">增加数量</button>
+</div>
+
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data: {
+            price: "20",
+            num: 0
+        },
+        computed:{
+            totalPrice(){
+                return this.price*this.num;
+            }
+        }
+    })
+</script>
+</body>
+</html>

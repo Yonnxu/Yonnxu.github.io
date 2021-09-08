@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        // 1．求1-100之间所有数的平均值
+        var sum = 0;
+        for (var i = 0; i <= 100; i++) {
+            sum += i;
+        }
+        var avg = sum / (i-1) ; //---------------特别注意i为101；而不是100;--------------------------
+        console.log(avg);
+
+
+        // 2．求1-100之间所有偶数和奇数的和
+        var oushuNum = 0;
+        var jishuNum = 0;
+        for (var j = 1; j <= 100; j++) {
+            if (j % 2 === 0) {
+                oushuNum+=j;
+            } else {
+                jishuNum+=j;
+            }
+        }
+        console.log('偶数之和为:'+oushuNum);
+        console.log('奇数之和为:'+jishuNum);
+
+        // 3．求1-100之间所有能被3整除的数字的和
+
+        var result=0;
+        for (var k=1;k<=100;k++){
+            if (k%3===0){
+                result+=k;
+            }
+        }
+        console.log('1-100之间所有能被3整除的数字的和为:'+result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

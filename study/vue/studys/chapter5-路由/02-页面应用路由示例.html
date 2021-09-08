@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--    tag————表示当前导航显示出来的HTML标签-->
+    <router-link to="/login" tag="button">前往登录页面</router-link>
+    <router-link to="/zhuce" tag="button">前往注册页面</router-link>
+    <router-view></router-view>
+
+</div>
+
+<template id="login">
+    <div class="offset-lg-4 col-lg-3 bg-secondary">
+        <h3 class="mt-4 text-center">登录页面</h3>
+        <input placeholder="请输入用户名" class="offset-2 col-lg-8 form-control mt-2">
+        <input placeholder="请输入密码" class="offset-2 col-lg-8 form-control mt-2">
+        <div class="text-center">
+            <button class="btn btn-danger mt-3">登录</button>
+        </div>
+    </div>
+</template>
+
+<template id="zhuce">
+    <div class="offset-lg-4 col-lg-3 bg-secondary">
+        <h3 class="mt-4 text-center">注册页面</h3>
+        <input placeholder="请输入用户名" class="offset-2 col-lg-8 form-control mt-2">
+        <input placeholder="请输入密码" class="offset-2 col-lg-8 form-control mt-2">
+        <div class="text-center">
+            <button class="btn btn-danger mt-3">注册</button>
+        </div>
+    </div>
+</template>
+<script src="js/vue.js"></script>
+<script src="js/vue-router.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script>
+    // 1.创建路由 10-组件
+    const router_login = {
+        'template': '#login'
+    }
+    const router_zhuce={
+        'template':'#zhuce'
+    }
+
+    // 2.定义路由,只有一个路由也要用数组
+    const myroute = [
+        {
+            path: '/login',
+            component: router_login
+        },
+        {
+            path:'/zhuce',
+            component: router_zhuce
+        }
+    ]
+
+    // 3.定义路由管理者,明确路由管理者管理那个路由
+    const routerObj=new VueRouter({
+        routes:myroute,
+    })
+
+
+    // 4.将路由管理者与当前的Vue实例关联
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            message: 'hello'
+        },
+        router:routerObj,
+    })
+</script>
+</body>
+</html>
