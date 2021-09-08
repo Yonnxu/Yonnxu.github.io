@@ -3,7 +3,7 @@
         <div class="mui-card">
             <div class="mui-card-content">
                 <!--<div class="mui-card-content-inner">-->
-                  <!--<swiper :img-list="goodsinfo.album"></swiper>-->
+                  <!--<swiper :images-list="goodsinfo.album"></swiper>-->
                 <!--</div>-->
               <swiper :img-list="goodsinfo.album"></swiper>
             </div>
