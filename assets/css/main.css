@@ -2187,8 +2187,12 @@
 		flex: 1;
 	}
 
+	.add:last-child{
+		margin-bottom: 50px;
+	}
+
 	.add img {
-		width: 70px;
+		width: 60px;
 		transition: all 0.6s;
 	}
 
