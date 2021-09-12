@@ -1492,10 +1492,7 @@
 	}
 
 	@media screen and (max-width: 736px) {
-        #header .down {
-            width: 100px;
-            bottom: 40px;
-        }
+
         .container {
             width: 100%;
         }
@@ -2918,6 +2915,13 @@
 	}
 
 	@media screen and (max-width: 812px) {
+		#lamu{
+			display: none;
+		}
+		#header .down {
+			bottom: 40px;
+		}
+
 		#live2dcanvas {
 			width: 150px;
 			height: 300px;
