@@ -13,8 +13,6 @@
     <link rel="stylesheet" href="assets/css/APlayer.min.css">
     <link rel="stylesheet" href="assets/css/icon/iconfont.css">
     <input type="hidden" id="_w_tusk">
-    <script type="text/javascript"
-            src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script>
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css"/>
     </noscript>
@@ -47,16 +45,20 @@
                 <li>
                     <a href="#">分类</a>
                     <ul>
-                        <li><a href="https://www.bilibili.com/anime/" target="_blank">追番</a></li>
+                        <li><a href="http://m-p.sakura.ne.jp/" target="_blank">追番</a></li>
                         <li><a href="#" target="_blank">追剧</a></li>
                         <li>
                             <a href="#">学习 &hellip;</a>
                             <ul>
-                                <li><a href="https://github.com/Yonnxu/Yonnxu.github.io/tree/main/study/android" target="_blank">Android</a></li>
-                                <li><a href="https://github.com/Yonnxu/Yonnxu.github.io/tree/main/study/python" target="_blank">Python</a></li>
+                                <li><a href="https://github.com/Yonnxu/Yonnxu.github.io/tree/main/study/android"
+                                       target="_blank">Android</a></li>
+                                <li><a href="https://github.com/Yonnxu/Yonnxu.github.io/tree/main/study/python"
+                                       target="_blank">Python</a></li>
                                 <li><a href="study/css_html/key/index.html" target="_blank">HTML+CSS</a></li>
-                                <li><a href="https://github.com/Yonnxu/Yonnxu.github.io/tree/main/study/Javascript" target="_blank">JavaScript</a></li>
-                                <li><a href="https://github.com/Yonnxu/Yonnxu.github.io/tree/main/study/vue" target="_blank">Vue</a></li>
+                                <li><a href="https://github.com/Yonnxu/Yonnxu.github.io/tree/main/study/Javascript"
+                                       target="_blank">JavaScript</a></li>
+                                <li><a href="https://github.com/Yonnxu/Yonnxu.github.io/tree/main/study/vue"
+                                       target="_blank">Vue</a></li>
                             </ul>
                         </li>
                         <li><a href="#">随笔</a></li>
@@ -176,7 +178,8 @@
             </header>
 
             <footer>
-                <a href="https://wenku.baidu.com/link?url=kZGRguth7raSUl6g8jzmbO2ETqW0pwTOXuh9N9e0BrqRCMpL5WnkDnkG_QnM1RjoiFBxidUunvTenI8VeK9unEaFKbcxN2LU7D0otlfx1yJVWVYH0K3MI9N2PNM2Ujxh" class="button">Read more</a>
+                <a href="https://wenku.baidu.com/link?url=kZGRguth7raSUl6g8jzmbO2ETqW0pwTOXuh9N9e0BrqRCMpL5WnkDnkG_QnM1RjoiFBxidUunvTenI8VeK9unEaFKbcxN2LU7D0otlfx1yJVWVYH0K3MI9N2PNM2Ujxh"
+                   class="button" target="_blank">Read more</a>
             </footer>
         </article>
 
@@ -218,7 +221,7 @@
         <div class="container">
             <div class="row">
 
-                <!-- Tweets -->
+                <!-- Add -->
                 <section class="col-8 col-12-mobile">
                     <header>
                         <ul class="add">
@@ -307,7 +310,8 @@
                         <ul class="menu">
                             <li>&copy; Untitled. 最终解释权归本人所有.</li>
                             <li>Email: <a
-                                    href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2195249372@qq.com" target="_blank">2195249372@qq.com</a>
+                                    href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2195249372@qq.com"
+                                    target="_blank">2195249372@qq.com</a>
                             </li>
                         </ul>
                     </div>
@@ -317,86 +321,38 @@
             </div>
         </div>
     </div>
+
+    <!-- Music  -->
     <div id="aplayer"></div>
 
-    <!-- Mouse  -->
+    <!-- MouseClick  -->
     <canvas class="fireworks"
-            style="position: fixed; left: 0; top: 0; z-index: 2147483647; pointer-events: none;"></canvas>
+            style="position: fixed; left: 0; top: 0; z-index: 9999999; pointer-events: none;"></canvas>
 </div>
 
 <!-- Scripts -->
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery/jquery.min.js"></script>
+<script src="assets/js/jquery/jquery.dropotron.min.js"></script>
+<script src="assets/js/jquery/jquery.scrolly.min.js"></script>
+<script src="assets/js/jquery/jquery.scrollex.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/APlayer.min.js"></script>
+<script src="assets/js/aplayer/APlayer.min.js"></script>
 <script src="live2d/live2dw/lib/L2Dwidget.min.js"></script>
 <script src="assets/js/anime.min.js"></script>
 <script src="assets/js/cursor.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fz6m/Private-web@2.0.7/js/custom/lamu-leimu.min.js"></script>
+
+<!-- BackTop  -->
+<script src="assets/js/lamu-leimu.min.js"></script>
+
+<!-- Little people  -->
 <script>
     L2Dwidget.init({
         model: {jsonPath: "live2d/live2dw/assets/asuna_04.model.json"}
     })
-</script>
-<script>
-    const ap = new APlayer({
-        // 迷你
-        mini: true,
-        // 吸底
-        fixed: true,
-        // 自动播放
-        autoplay: true,
-        container: document.getElementById('aplayer'),
-        audio: [
-            {
-                name: '平凡之路',
-                artist: '朴树',
-                url: 'assets/mp3/朴树 - 平凡之路.mp3',
-                cover: 'images/music/Road.jpeg'
-            }, {
-                name: 'スパークル',
-                artist: 'RADWIMPS',
-                url: 'assets/mp3/スパークル.mp3',
-                cover: 'images/music/name.jpeg'
-            }, {
-                name: '[Instrumental]',
-                artist: ' Swaggin\' Drama',
-                url: 'assets/mp3/Swaggin\' Drama [Instrumental].mp3',
-                cover: 'images/music/lol.jpeg'
-            }, {
-                name: 'unravel',
-                artist: 'TK from凛冽时雨',
-                url: 'assets/mp3/TK from凛冽时雨——unravel.mp3',
-                cover: 'images/music/unravel.jpeg'
-            }, {
-                name: '失楽園',
-                artist: 'Reol',
-                url: 'assets/mp3/Reol - 失楽園.mp3',
-                cover: 'images/music/Reol.jpeg'
-            }, {
-                name: 'mede:mede',
-                artist: 'Reol',
-                url: 'assets/mp3/Reol - mede mede.mp3',
-                cover: 'images/music/Reol.jpeg'
-            }, {
-                name: 'My Songs Know What You Did In the Dark',
-                artist: 'Fall Out Boy',
-                url: 'assets/mp3/Fall Out Boy - My Songs Know What You Did In the Dark (Light Em Up).mp3',
-                cover: 'images/music/My Songs Know What You Did In the Dark.jpg'
-            }, {
-                name: '心臓を捧げよ!',
-                artist: 'Linked Horizon',
-                url: 'assets/mp3/Linked Horizon - 心臓を捧げよ! (献出心脏!).mp3',
-                cover: 'images/music/心臓を捧げよ!.jpg'
-            }]
-    });
-    ap.play();
 </script>
 </body>
 </html>
