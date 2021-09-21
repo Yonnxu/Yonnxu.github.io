@@ -2157,9 +2157,8 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
-		padding-top: 1em;
-		padding-left: 2em;
+		margin: 0 0;
+		padding: 1em 2em;
 	}
 
 		ul li {
@@ -2711,27 +2710,28 @@ input, select, textarea {
 				padding-top: 0;
 			}
 
+/* context */
 
-	#one {
+	.context {
+		position: relative;
+		width: 100%;
 		border-bottom: solid 2px #efefef;
 		border-radius: 20px;
 		/*border: 2px none #333333;*/
 		background-color: #f3f3f3;
 	}
+		.context div {
+			margin: 0 0;
+			padding: 1em 2em;
+		}
 
-	#one ul li h3 {
-		margin: 0 0 0.5em 0;
-	}
+		.context p {
+			text-indent:2em;
+		}
 
-	#one ul li p{
-		text-indent:2em;
-	}
-
-	.introduction{
-		margin-top: -1.5em;
-	}
-
-/*  Information  */
+			.context ul li h3 {
+				margin: 0 0 0.5em 0;
+			}
 
 	.information {
 		border-bottom: solid 2px #efefef;
@@ -2741,6 +2741,25 @@ input, select, textarea {
 		color: #49464a;
 		text-align: center;
 	}
+
+	.introduction {
+		margin-top: -1.5em;
+	}
+
+	.tags:before {
+		content: "";
+		position: absolute;
+		border: 20px solid transparent;
+		border-bottom: 12px solid #f3f3f3;
+		z-index: 2;
+		margin-top: -48px;
+		left: calc(50% - 20px);
+	}
+
+	.tags p:first-child{
+		margin: 0;
+	}
+
 
 /* Poptrox */
 
