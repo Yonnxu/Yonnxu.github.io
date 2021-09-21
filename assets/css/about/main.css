@@ -2158,7 +2158,8 @@ input, select, textarea {
 	ul {
 		list-style: disc;
 		margin: 0 0 2em 0;
-		padding-left: 1em;
+		padding-top: 1em;
+		padding-left: 2em;
 	}
 
 		ul li {
@@ -2713,6 +2714,9 @@ input, select, textarea {
 
 	#one {
 		border-bottom: solid 2px #efefef;
+		border-radius: 20px;
+		/*border: 2px none #333333;*/
+		background-color: #f3f3f3;
 	}
 
 	#one ul li h3 {
@@ -3256,61 +3260,69 @@ input, select, textarea {
 
 	}
 
-.signature{
-	background-color: rgba(184, 163, 255, 0.2);
-	border-radius: 30px;
-	padding: 0.8em;
-}
-
-#clock {
-	color: #fff;
-	font-size: 100px;
-	height: 80px;
-	font-family: 'Share Tech Mono';
-	text-shadow: 0 0 20px #0AAFE6, 0 2px 0 #DAF6FF;
-	line-height: 80px;
-	background: radial-gradient(rgba(177,181,255,0.6), rgba(21, 22, 255, 0) 60%);
-	/*background: rgba(0,0,0,0.1);*/
-}
-
-@media screen and (max-width: 1800px) {
-	#clock {
-		font-size: 90px;
+	.signature{
+		background-color: rgba(184, 163, 255, 0.2);
+		border-radius: 30px;
+		padding: 0.8em;
 	}
-}
 
-@media screen and (max-width: 1280px) {
 	#clock {
-		font-size: 50px;
+		color: #fff;
+		font-size: 100px;
+		height: 80px;
+		font-family: 'Share Tech Mono';
+		text-shadow: 0 0 20px #0AAFE6, 0 2px 0 #DAF6FF;
+		line-height: 80px;
+		background: radial-gradient(rgba(177,181,255,0.6), rgba(21, 22, 255, 0) 60%);
+		/*background: rgba(0,0,0,0.1);*/
 	}
-}
 
-@media screen and (max-width: 964px) {
-	#clock {
-		margin-top: 1em;
-		font-size: 75px;
+	@media screen and (max-width: 1800px) {
+		#clock {
+			font-size: 90px;
+		}
 	}
-}
-#header h1 strong {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-}
 
-.aplayer-list {
-	max-height: 98px !important
-}
+	@media screen and (max-width: 1280px) {
+		#clock {
+			font-size: 50px;
+		}
+	}
 
-.aplayer-list ol {
-	max-height: 98px !important
-}
+	@media screen and (max-width: 964px) {
+		#clock {
+			margin-top: 1em;
+			font-size: 75px;
+		}
+	}
 
-body.night{
-	background-color: #263238;
-	color: #aaa;
-}
+	@media screen and (max-width: 360px) {
+		#clock {
+			margin-top: 1em;
+			font-size: 65px;
+		}
+	}
 
-body.night img {
-	filter: brightness(30%);
-}
+	#header h1 strong {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+
+	.aplayer-list {
+		max-height: 98px !important
+	}
+
+	.aplayer-list ol {
+		max-height: 98px !important
+	}
+
+	/*body.night{*/
+	/*	background-color: #263238;*/
+	/*	color: #aaa;*/
+	/*}*/
+
+	/*body.night img {*/
+	/*	filter: brightness(30%);*/
+	/*}*/

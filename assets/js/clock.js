@@ -13,18 +13,19 @@ function myTime(){
 myTime();
 setInterval(myTime, 1000);
 
-function f() {
-  const time = new Date();
-  const hh = time.getHours();
-
-  if(parseInt(Math.floor(hh / 10).toString()+(hh % 10).toString())>=22||parseInt(Math.floor(hh / 10).toString()+(hh % 10).toString())<6){
-    document.body.classList.add('night');
-    document.cookie = "night=1;path=/";
-    console.log(Math.floor(hh / 10).toString()+(hh % 10).toString())
-  }else{
-    document.body.classList.remove('night');
-    document.cookie = "night=0;path=/";
-    console.log('夜间模式关闭');
-  }
-}
-f()
+// function f() {
+//   const time = new Date();
+//   const hh = time.getHours();
+//
+//   if(parseInt(Math.floor(hh / 10).toString()+(hh % 10).toString())>=22||parseInt(Math.floor(hh / 10).toString()+(hh % 10).toString())<6){
+//     document.body.classList.add('night');
+//     document.cookie = "night=1;path=/";
+//     console.log(Math.floor(hh / 10).toString()+(hh % 10).toString())
+//   }else{
+//     document.body.classList.remove('night');
+//     document.cookie = "night=0;path=/";
+//     console.log('夜间模式关闭');
+//     console.log(Math.floor(hh / 10).toString()+(hh % 10).toString())
+//   }
+// }
+// f()

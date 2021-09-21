@@ -12,9 +12,15 @@
 		<link rel="stylesheet" href="../assets/css/about/main.css" />
 		<link rel="stylesheet" href="../assets/css/APlayer.min.css">
 	</head>
-	<body class="is-preload <?php echo($_COOKIE['night'] == '1' || date('H') > 22 || date('H') < 6 ? 'night' : ''); ?>">
+	<body class="is-preload">
 		<!-- Header -->
+		<div class="checkbox">
+			<div class="inner">
+				<div class="toggle"></div>
+			</div>
+		</div>
 			<header id="header">
+
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="../images/head/head.jpg" alt="" /></a>
 					<h1><strong>欢迎各位大佬指指点点</strong><br/><br/></h1><h3>个性签名：</h3>
@@ -42,7 +48,7 @@
                             </li>
                             <li>
                                 <h3>关于博主</h3>
-                                <p>有点社恐，时时散发出生人勿进的AT立场，但如果熟悉了就表现地比较逗比，爱自嘲，毕竟，生活如果没有一点有趣要素，那么'活着'岂不是很无趣 ╮（￣▽￣）╭。</p>
+                                <p>有点社恐，时时散发出生人勿进的AT立场 ｜д•´)!!，但如果熟悉了就表现地比较逗比，爱自嘲 (●′ω`●)，毕竟，生活如果没有一点有趣要素，那么'活着'岂不是很无趣 ╮（￣▽￣）╭。</p>
                                 <ul class="introduction">
                                     <li>状态：一只只会cv的蒟蒻</li>
                                     <li>兴趣：喜欢与设计相关的</li>
@@ -56,42 +62,8 @@
 
 				<!-- Two -->
 					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="#" class="button">Full Portfolio</a></li>
-						</ul>
+						<div class="Summary">感想</div>
+						<p>经过几个星期的删删改改终于完成了，当然还不是完全满意，后续肯定还是会断断续续地改改样式</p>
 					</section>
 
 			</div>
@@ -100,7 +72,7 @@
 			<footer id="footer">
 				<div class="inner">
 					<ul class="copyright">
-						<li>&copy; Yonnxu</li><li>Agents: <a href="https://aged-resonance-2cbb.yonnxu.workers.dev/">yonnxu</a></li>
+						<li>&copy; Yonnxu</li><li>Agents: <a href="https://aged-resonance-2cbb.yonnxu.workers.dev/" target="_blank">yonnxu</a></li>
 					</ul>
 				</div>
 			</footer>
@@ -117,5 +89,6 @@
 			<script src="../assets/js/clock.js"></script>
 			<script src="../assets/js/backButton/lamu-leimu.min.js"></script>
 			<script src="../assets/js/leimu.js"></script>
+			<script src="../assets/js/sakura.js"></script>
 	</body>
 </html>

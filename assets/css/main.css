@@ -3359,3 +3359,8 @@
 	#lamu-leimu #leimu{
 		display: none;
 	}
+
+	#live2dcanvas {
+		margin-bottom: -15px;
+	}
+
