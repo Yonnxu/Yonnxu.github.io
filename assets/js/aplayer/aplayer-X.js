@@ -17,7 +17,7 @@ const ap = new APlayer({
             artist: 'RADWIMPS',
             url: '../assets/mp3/スパークル.mp3',
             cover: '../images/music/name.jpeg',
-            lrc:'../assets/mp3/lyrics/パーフェクトベイビー.lrc'
+            lrc:'../assets/mp3/lyrics/スパークル.lrc'
         }, {
             name: '[Instrumental]',
             artist: ' Swaggin\' Drama',
