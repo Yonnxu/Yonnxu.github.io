@@ -2309,9 +2309,9 @@
 	#header .text-malfunction {
 		position: absolute;
 		top: 28%;
-		left: 106%;
+		left: 50%;
 		transform: translate(-50%, -50%) scale(2.5);
-		width: 220px;
+		width: 100%;
 		font-size: 22px;
 		font-family: sans-serif;
 		color: transparent;
