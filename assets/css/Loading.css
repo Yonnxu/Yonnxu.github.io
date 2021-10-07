@@ -1,0 +1,54 @@
+.loading{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 99999999999;
+}
+.svg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(0deg, rgb(47, 102, 255), rgb(161, 79, 255) 30%, rgb(238, 55, 255) 60%, rgb(255, 0, 76) 100%);
+    position: relative;
+}
+
+.svg:before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(0deg, rgb(47, 102, 255), rgb(161, 79, 255) 30%, rgb(238, 55, 255) 60%, rgb(255, 0, 76) 100%);
+    filter: blur(30px);
+    animation: rotate .4s linear infinite;
+}
+
+.svg::after {
+    content: '正在加载中……';
+    text-align: center;
+    line-height: 150px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
