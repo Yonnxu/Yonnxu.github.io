@@ -10,8 +10,15 @@ f();
 // Dom加载完成，移除Loading
 
 $(function(){
-    $(".loadings").remove()
+    $(".loadings").remove();
+    $(".gtr-25 div").hover(function () {
+        $(this).siblings().stop().fadeTo(1000,0.5)
+    },function () {
+        $(this).siblings().stop().fadeTo(1000,1)
+    })
 });
+
+
 
 // Dynamic Title
 window.onfocus = function () {
