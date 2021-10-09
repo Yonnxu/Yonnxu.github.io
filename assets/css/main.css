@@ -2239,7 +2239,7 @@
 		box-shadow: 2px 2px 12px #b1b1b1, -2px -2px 12px #b1b1b1;
 	}
 
-	#header h3 {
+	#header .text-body {
 		padding-top: 60px;
 	}
 
@@ -2288,7 +2288,7 @@
 		font-weight: bolder;
 	}
 
-	#header h3,h1 {
+	#header h1 {
 		background-image: linear-gradient(to right, red, orange, yellow, green, blue, green, yellow, orange, red, orange, yellow, green, blue, green, yellow, orange, red);
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
@@ -2325,7 +2325,7 @@
 			width: 120px;
 		}
 
-		#header h3 {
+		#header .text-body {
 			padding-top: 0;
 		}
 
