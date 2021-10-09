@@ -2307,13 +2307,14 @@
 
 
 	#header .text-malfunction {
+		font-family: -webkit-pictograph;
 		position: absolute;
-		top: 28%;
+		top: 42%;
 		left: 50%;
-		transform: translate(-50%, -50%) scale(2.5);
-		width: 100%;
+		transform: translate(-50%, -50%);
+		width: 336px;
 		font-size: 22px;
-		font-family: sans-serif;
+		/*font-family: sans-serif;*/
 		color: transparent;
 	}
 
@@ -2341,9 +2342,10 @@
 		content: attr(data-word);
 		position: absolute;
 		top: 0;
-		height: 36px;
+		height: 40px;
 		overflow: hidden;
 		filter: contrast(200%);
+		font-size: 55px;
 	}
 
 	#header .text-malfunction:before {
