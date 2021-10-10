@@ -1267,6 +1267,10 @@ input, select, textarea {
 
 		@media screen and (max-width: 736px) {
 
+			.tags:before {
+				margin-top: -84px !important;
+			}
+
 			.row {
 				display: flex;
 				flex-wrap: wrap;
@@ -3337,11 +3341,6 @@ input, select, textarea {
 		max-height: 98px !important
 	}
 
-	/*body.night{*/
-	/*	background-color: #263238;*/
-	/*	color: #aaa;*/
-	/*}*/
-
-	/*body.night img {*/
-	/*	filter: brightness(30%);*/
-	/*}*/
+	#canvas_sakura{
+		z-index: 99999;
+	}
