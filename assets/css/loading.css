@@ -1,12 +1,14 @@
 .loadings {
-    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
     z-index: 99999999999;
     margin: 0;
-    width: 100%;
     color: #fff;
     background: linear-gradient(-45deg, #eeaa84, #e74579, #73b6e0, #79d9b0);
     background-size: 400% 400%;
