@@ -1,0 +1,70 @@
+.loadings {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 99999999999;
+    margin: 0;
+    width: 100%;
+    color: #fff;
+    background: linear-gradient(-45deg, #eeaa84, #e74579, #73b6e0, #79d9b0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.load-content {
+    position: relative;
+    text-align: center;
+}
+
+.load-content img {
+    width: 100px;
+    height: 100px;
+}
+
+.load-content p {
+    font-size: 28px;
+}
+
+@media screen and (max-width: 1680px) {
+    .load-content img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .load-content p {
+        font-size: 22px;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    .load-content img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .load-content p {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .load-content img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
