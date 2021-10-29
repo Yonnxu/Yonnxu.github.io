@@ -9,8 +9,7 @@
     justify-content: center;
     z-index: 99999999999;
     margin: 0;
-    color: #fff;
-    background: linear-gradient(-45deg, #eeaa84, #e74579, #73b6e0, #79d9b0);
+    background: linear-gradient(-45deg, #ffffff, #e6e6e6, rgb(205, 205, 205), #e6e6e6);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
 }
