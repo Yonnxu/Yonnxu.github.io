@@ -2598,8 +2598,18 @@
 		margin-bottom: 0;
 	}
 
+	#banner header {
+
+	}
+
 	#banner header > p {
 		margin-bottom: 0;
+	}
+
+	#banner .welcome {
+		/*position: absolute;*/
+		/*left: 50%;*/
+		/*transform: translate(-50%,0);*/
 	}
 
 	/* Banner */
@@ -2787,6 +2797,11 @@
 		-webkit-transition: opacity 0.75s ease-in-out;
 		-ms-transition: opacity 0.75s ease-in-out;
 		transition: opacity 0.75s ease-in-out;
+	}
+
+
+	.carousel article:hover {
+		box-shadow: 0 0 10px #000;
 	}
 
 	.carousel article.loading {
