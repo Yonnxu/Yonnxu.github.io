@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/about/main.css" />
-		<link rel="stylesheet" href="assets/css/APlayer.min.css">
+		<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
 	</head>
 	<body class="is-preload">
 		<!-- Header -->
@@ -33,7 +33,20 @@
 		<!-- Main -->
 			<div id="main">
 				<!-- Music  -->
-				<div id="aplayer"></div>
+				<meting-js
+						server="netease"
+						type="playlist"
+						id="7477755327"
+						theme="#25CCF7"
+						autoplay="false"
+						loop="all"
+						order="random"
+						preload="auto"
+						list-folded="true"
+						list-max-height="500px"
+						lrcType="1">
+				</meting-js>
+
 				<!-- One -->
                     <div class="information">目前可以公开的情报</div>
 					<section class="context">
@@ -86,8 +99,8 @@
 			<script src="assets/js/theme/breakpoints.min.js"></script>
 			<script src="assets/js/theme/util.js"></script>
 			<script src="assets/js/about/main.js"></script>
-			<script src="assets/js/aplayer/APlayer.min.js"></script>
-			<script src="assets/js/aplayer/aplayer-X.js"></script>
+			<script src="https://fastly.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+			<script src="https://fastly.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 			<script src="assets/js/about/clock.js"></script>
 			<script src="assets/js/backButton/lamu-leimu.min.js"></script>
 			<script src="assets/js/about/leimu.js"></script>
